@@ -1,0 +1,45 @@
+# Ignore local workspace-specific states (history, backups, and user settings)
+.vscode/*
+!.vscode/settings.json
+
+# Ignore workspace-specific history databases used by local history extensions
+.history/
+
+# If Code Spell Checker generates any local workspace dictionaries/caches
+.cspell/
+.cspell*.json
+
+# macOS System Files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon_
+._*
+
+# Windows System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Temporary backup files from editors
+*~
+*.swp
+*.tmp
+
+# Virtual environment directories
+env/
+venv/
+.venv/
+
+# Distribution / packaging
+build/
+build_debug/
+build_release/
+dist/
+
+# IDE-specific files
+.idea/
+*.sublime-project
+*.sublime-workspace
+

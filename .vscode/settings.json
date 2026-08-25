@@ -1,0 +1,10 @@
+{
+  // Completely disables all telemetry, crash reporting, and usage data collection
+  "telemetry.telemetryLevel": "off",
+  
+  // Stops VS Code from connecting to Microsoft servers to test experimental features
+  "workbench.enableExperiments": false,
+
+  // The master switch to disable and hide all built-in AI features (Chat, inline edits, Copilot extensions)
+  "chat.disableAIFeatures": true,
+}
