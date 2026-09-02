@@ -9,7 +9,7 @@ Complete the toolchain setup described in [SETUP.md](SETUP.md) before the first 
 Clone the repository:
 
 ```
-git clone https://source.coderefinery.org/sdm-edu/rpi-pico-playground.git
+git clone https://source.coderefinery.org/sdm-edu/phce-2026
 ```
 
 Exercise code is published on `master`. Create your own branch and do all your work there:
