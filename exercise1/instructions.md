@@ -31,15 +31,16 @@ environment works from source code all the way to running firmware on the Pico W
    - Select **Pico W** as the target board.
    - Choose a folder for the project.
    - Create/open the project in VS Code.
-4. Add a `printf("Test");` statement inside the while loop in main().
-5. Build the project.
+4. Add `stdio_init_all();` as the first step inside main()
+5. Add `printf("Test");` inside while loop in main()
+6. Build the project.
    - Use the **Compile / Build** command from the Raspberry Pi Pico extension.
    - Watch the terminal output and make sure the build finishes without errors.
-6. Connect the Pico W to your computer using USB.
-7. Flash the program to the Pico W using the **Run / Flash** command in the
+7. Connect the Pico W to your computer using USB.
+8. Flash the program to the Pico W using the **Run / Flash** command in the
    Raspberry Pi Pico extension or by manually uploading the .uf2 file.
-8. Check the board. The LED should now blink continuously.
-9. Connect the **Debug Probe** (hardware) and open the **Serial Monitor**, then look for the output.
+9. Check the board. The LED should now blink continuously.
+10. Connect the **Debug Probe** (hardware) and open the **Serial Monitor**, then look for the output.
 
 ### Checklist
 - [ ] Blink project created and opened
