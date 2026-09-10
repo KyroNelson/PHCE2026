@@ -33,9 +33,7 @@ venv/
 .venv/
 
 # Distribution / packaging
-build/
-build_debug/
-build_release/
+build*/
 dist/
 
 # IDE-specific files
