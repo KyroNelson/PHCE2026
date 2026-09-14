@@ -1,3 +1,9 @@
+/**
+ * Copyright (c) 2020 Raspberry Pi (Trading) Ltd.
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
 #include "pico/stdlib.h"
 
 // Pico W devices use a GPIO on the WIFI chip for the LED,
@@ -6,24 +12,8 @@
 #include "pico/cyw43_arch.h"
 #endif
 
-#ifndef DOT
-#define DOT 200
-#endif
-
-#ifndef DASH
-#define DASH 600
-#endif
-
-#ifndef BREAK_ELEMENT
-#define BREAK_ELEMENT 200
-#endif
-
-#ifndef BREAK_LETTER
-#define BREAK_LETTER 600
-#endif
-
-#ifndef BREAK_WORD
-#define BREAK_WORD 1400
+#ifndef LED_DELAY_MS
+#define LED_DELAY_MS 250
 #endif
 
 // Perform initialisation
@@ -41,59 +31,25 @@ int pico_led_init(void) {
 }
 
 // Turn the led on or off
-void pico_set_led(int delay) {
+void pico_set_led(bool led_on) {
 #if defined(PICO_DEFAULT_LED_PIN)
     // Just set the GPIO on or off
-    gpio_put(PICO_DEFAULT_LED_PIN, true);
-    sleep_ms(delay);
-    gpio_put(PICO_DEFAULT_LED_PIN, false);
+    gpio_put(PICO_DEFAULT_LED_PIN, led_on);
 #elif defined(CYW43_WL_GPIO_LED_PIN)
     // Ask the wifi "driver" to set the GPIO on or off
-    cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, true);
-    sleep_ms(delay);
-    cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, false);
+    cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, led_on);
 #endif
 }
 
 int main() {
+    stdio_init_all();
     int rc = pico_led_init();
     hard_assert(rc == PICO_OK);
-    
-    sleep_ms(BREAK_WORD);
-
     while (true) {
-        pico_set_led(DOT);
-        sleep_ms(BREAK_ELEMENT);
-        pico_set_led(DOT);
-        sleep_ms(BREAK_ELEMENT);    
-        pico_set_led(DOT);
-        sleep_ms(BREAK_ELEMENT);
-        pico_set_led(DOT);
-
-        sleep_ms(BREAK_LETTER);
-
-        pico_set_led(DOT);
-
-        sleep_ms(BREAK_LETTER);
-
-        pico_set_led(DOT);
-        sleep_ms(BREAK_ELEMENT);
-        pico_set_led(DASH);
-        sleep_ms(BREAK_ELEMENT);
-        pico_set_led(DOT);
-        sleep_ms(BREAK_ELEMENT);
-        pico_set_led(DOT);
-
-        sleep_ms(BREAK_LETTER);
-
-        pico_set_led(DOT);
-        sleep_ms(BREAK_ELEMENT);
-        pico_set_led(DASH);
-        sleep_ms(BREAK_ELEMENT);
-        pico_set_led(DASH);
-        sleep_ms(BREAK_ELEMENT);
-        pico_set_led(DOT);
-
-        sleep_ms(BREAK_WORD);
+        printf("Test Twice\n");
+        pico_set_led(true);
+        sleep_ms(LED_DELAY_MS);
+        pico_set_led(false);
+        sleep_ms(LED_DELAY_MS);
     }
 }
