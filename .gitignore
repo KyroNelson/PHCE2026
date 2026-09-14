@@ -1,6 +1,7 @@
 # Ignore local workspace-specific states (history, backups, and user settings)
 .vscode/*
 !.vscode/settings.json
+*/.vscode
 
 # Ignore workspace-specific history databases used by local history extensions
 .history/
