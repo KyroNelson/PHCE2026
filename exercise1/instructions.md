@@ -14,7 +14,7 @@ instructions have been followed and your Pico development environment is in plac
 **Anything that did not work, and how you solved it:**
 
 > _Answer:_
->
+> Everything worked
 
 ---
 
@@ -43,16 +43,17 @@ environment works from source code all the way to running firmware on the Pico W
 10. Connect the **Debug Probe** (hardware) and open the **Serial Monitor**, then look for the output.
 
 ### Checklist
-- [ ] Blink project created and opened
-- [ ] Project builds without errors
-- [ ] Program flashed to the Pico W
-- [ ] The LED is blinking
-- [ ] Serial Monitor output is visible
+- [x] Blink project created and opened
+- [x] Project builds without errors
+- [x] Program flashed to the Pico W
+- [x] The LED is blinking
+- [x] Serial Monitor output is visible
 
 **If the build or flash failed, what was the error and what fixed it?**
 
 > _Answer:_
->
+> First flash wasn't working due to not having proper USB driver installed,
+> following the steps from the troubleshoot guide solved the issue
 
 ---
 
@@ -69,11 +70,98 @@ questions:
 
 | # | Question | Answer |
 |---|----------|--------|
-| 1 | Name | |
-| 2 | Purpose | |
-| 3 | Input or output | |
+| 1 | Name | Raspberry Pi Pico  |
+| 2 | Purpose | The core module responsible for </br> communication with all the others|
+| 3 | Input or output | General Purpose I/O |
 
-_Add more blocks as you write._
+
+### Module 2
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Name | OLED Screen |
+| 2 | Purpose | Monochrome Display for <br/> compact portable applications |
+| 3 | Input or output | Output (I<sup>2</sup>C Interface) |
+
+### Module 3
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Name | Temperature and Humidity Sensor |
+| 2 | Purpose | Measures humidity and temperature <br/> of the environment and outputs the data|
+| 3 | Input or output | Digital signal output <br/> (response signal of 40-bit data) |
+
+### Module 4
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Name | LED Button |
+| 2 | Purpose | Send a signal to the control <br/> circuit when pressed |
+| 3 | Input or output | Control data signal output/input |
+
+### Module 5
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Name | RGB Led |
+| 2 | Purpose | Emit composite RGB light |
+| 3 | Input or output | Output |
+
+### Module 6
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Name | Motor Driver |
+| 2 | Purpose | Controls speed and direction of <br/> an external motor through change <br/> in frequency |
+| 3 | Input or output | Output for motor movement direction |
+
+### Module 7
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Name | LDR Sensor |
+| 2 | Purpose | Used to detect the change in <br/> the light intensity (photo-conductive) |
+| 3 | Input or output | Input |
+
+### Module 8
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Name | Power Relay |
+| 2 | Purpose | Control other electrical circuits <br/> by opening and closing them|
+| 3 | Input or output | Input/Output |
+
+### Module 9
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Name | Rotary Potentiometer |
+| 2 | Purpose | Allows to control the current flow <br/> by manually adjusting its resistance |
+| 3 | Input or output | Signal input |
+
+### Module 10
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Name | IoT Board |
+| 2 | Purpose | Provides simple connectivity through <br/> UART interface|
+| 3 | Input or output | General Purpose I/O |
+
+### Module 11
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Name | Buzzer |
+| 2 | Purpose | Produces sound at a variable frequency |
+| 3 | Input or output | Sound output |
+
+### Module 12
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Name | Breadboard/Protoboard |
+| 2 | Purpose | Used as a construction base for <br/> prototyping various electronic systems |
+| 3 | Input or output | n/a (it's just a piece of plastic :P) |
 
 ---
 
@@ -100,4 +188,4 @@ Simply copy the modified .c file(s) containing your solution to the exercise fol
 **Attached file(s):**
 
 > _Filename:_
->
+> morse.c
