@@ -300,7 +300,7 @@ off to save a little power on pins that are unused or carrying an analog signal 
 - [ ] SDK-to-HAL-to-register table filled in
 - [ ] Compiled `text` size compared across all three
 
-**Why isn't the button's input value inverted before it's passed to `gpio_put()`?**
+**The button is configured with a pull-down resistor. What logic level does the input read when the button is released and when it is pressed? How would this change if a pull-up resistor were used instead?**
 
 > _Answer:_
 >
