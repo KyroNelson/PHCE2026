@@ -1,0 +1,13 @@
+<html>
+<head>
+    <title>Pico status</title>
+</head>
+<body>
+    <h1>Pico status</h1>
+    <p>Uptime: <!--#uptime--> seconds</p>
+    <p>LED: <!--#led--></p>
+    <p>Button: <!--#button--></p>
+    <p>Temperature: <!--#temp--> C</p>
+    <p><a href="/led/on">LED on</a> | <a href="/led/off">LED off</a></p>
+</body>
+</html>
