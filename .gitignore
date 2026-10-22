@@ -41,3 +41,6 @@ dist/
 *.sublime-project
 *.sublime-workspace
 
+
+# Wi-Fi name and password (Session 7)
+wifi.cmake
